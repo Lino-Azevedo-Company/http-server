@@ -3,7 +3,7 @@
 
 #include <memory>
 
-namespace http {
+namespace http::filter {
     class HttpFilter {
         public:
             explicit HttpFilter() {}

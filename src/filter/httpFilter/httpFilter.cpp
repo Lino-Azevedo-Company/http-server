@@ -1,9 +1,11 @@
 #include "httpFilter.hpp"
 
-void http::HttpFilter::setNextFilter(std::shared_ptr<http::HttpFilter> filter) {
-    this->nextFilter = move(filter);
-}
+namespace http::filter {
+    void HttpFilter::setNextFilter(std::shared_ptr<HttpFilter> filter) {
+        this->nextFilter = move(filter);
+    }
 
-std::shared_ptr<http::HttpFilter> http::HttpFilter::getNextFilter() {
-    return this->nextFilter;
+    std::shared_ptr<HttpFilter> HttpFilter::getNextFilter() {
+        return this->nextFilter;
+    }
 }
