@@ -3,8 +3,5 @@ CFLAGS = -Wall -g
 
 all: main
 
-main: main.o
-	$(CC) $(CFLAGS) -o main main.o
-
-main.o:
-	$(CC) $(CFLAGS) -c src/main.cpp
+main: 
+	$(CC) $(CFLAGS) src/main.cpp src/log/serverLogger.cpp src/log/serverLogger.hpp -o main
